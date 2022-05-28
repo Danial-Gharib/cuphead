@@ -1,0 +1,5 @@
+.anchorPane {
+    -fx-background-image: url("../assets/Menus/LoginAndProfileMenu.png");
+    -fx-background-size: cover;
+    -fx-opacity: 0.8;
+}

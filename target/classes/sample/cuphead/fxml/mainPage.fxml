@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1200.0" styleClass="anchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.cuphead.view.MainPageController">
+<stylesheets><URL value="@../css/mainPage.css" /></stylesheets>
+    <ImageView fitHeight="42.0" fitWidth="46.0" layoutX="23.0" layoutY="24.0" onMouseClicked="#mute" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../assets/img/LoginMenu/mute_icon.png" />
+        </image>
+    </ImageView>
+   <VBox alignment="CENTER" layoutX="400.0" layoutY="264.0" maxWidth="400" prefHeight="375.0" prefWidth="794.0" spacing="15">
+      <children>
+         <Button mnemonicParsing="false" styleClass="button" text="Play" onMouseClicked="#playGame"/>
+         <Button mnemonicParsing="false" styleClass="button" text="Profile" onMouseClicked="#profileMenu"/>
+         <Button mnemonicParsing="false" styleClass="button" text="Setting" onMouseClicked="#setting"/>
+         <Button mnemonicParsing="false" styleClass="button" text="Score Board" onMouseClicked="#scoreBoard"/>
+         <Button mnemonicParsing="false" styleClass="button" text="Exit" onMouseClicked="#exit"/>
+      </children>
+   </VBox>
+   <ImageView fx:id="avatar" fitHeight="89.0" fitWidth="109.0" layoutX="150.0" layoutY="9.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
+    <Label fx:id="username" alignment="CENTER" contentDisplay="CENTER" layoutX="263.0" layoutY="9.0"  prefHeight="73.0" prefWidth="145.0" textFill="#c32727">
+      <font>
+         <Font name="Georgia Bold" size="32.0" />
+      </font></Label>
+</AnchorPane>

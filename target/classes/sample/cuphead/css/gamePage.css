@@ -1,0 +1,4 @@
+.anchor{
+    -fx-background-image: url("../assets/img/GameBackground/sky.jpg");
+    -fx-background-size: cover;
+}

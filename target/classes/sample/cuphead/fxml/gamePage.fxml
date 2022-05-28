@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane onKeyPressed="#movement"  fx:id="pane"  prefHeight="720" prefWidth="1200" styleClass="anchor" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.cuphead.view.GamePageController">
+    <stylesheets><URL value="@../css/gamePage.css" /></stylesheets>
+    <ImageView  fitHeight="29.0" fitWidth="29.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#mute" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../assets/img/LoginMenu/mute_icon.png" />
+        </image>
+    </ImageView>
+   <ImageView fx:id="avatar" fitHeight="50.0" fitWidth="55.0" layoutX="76.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+   <Label fx:id="username" alignment="CENTER" contentDisplay="CENTER" layoutX="148.0" layoutY="9.0" prefHeight="40.0" prefWidth="55.0" text="Label" textFill="#111010" />
+   <Label fx:id="score" alignment="CENTER" contentDisplay="CENTER" layoutX="213.0" layoutY="9.0" prefHeight="40.0" prefWidth="55.0" text="Label" textFill="#222020" />
+   <ImageView fx:id="plane"  fitHeight="100.0" fitWidth="130.0" layoutX="66.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true" />
+</AnchorPane>

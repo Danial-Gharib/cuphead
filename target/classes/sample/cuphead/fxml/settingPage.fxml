@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1200.0" styleClass="anchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.cuphead.view.SettingPageController">
+    <stylesheets><URL value="@../css/profilePage.css" /></stylesheets>
+    <ImageView fitHeight="42.0" fitWidth="46.0" layoutX="23.0" layoutY="24.0" onMouseClicked="#mute" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../assets/img/LoginMenu/mute_icon.png" />
+    </ImageView>
+   <Circle fill="#c7d4e1" layoutX="344.0" layoutY="278.0" onMouseClicked="#easy" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+   <Circle fill="#74a3cd" layoutX="344.0" layoutY="375.0" onMouseClicked="#medium" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+   <Circle layoutX="344.0" layoutY="466.0" onMouseClicked="#hard" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+   <Label layoutX="423.0" layoutY="242.0" text="EASY" textFill="#2b00ff">
+      <font>
+         <Font name="Wingdings 2" size="61.0" />
+      </font>
+   </Label>
+   <Label layoutX="423.0" layoutY="338.0" text="MEDIUM" textFill="#180deb">
+      <font>
+         <Font name="Wingdings" size="59.0" />
+      </font>
+   </Label>
+   <Label layoutX="423.0" layoutY="427.0" prefHeight="79.0" prefWidth="337.0" text="HARD" textFill="#1f34cc">
+      <font>
+         <Font name="Wingdings" size="51.0" />
+      </font>
+   </Label>
+</AnchorPane>

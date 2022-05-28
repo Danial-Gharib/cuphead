@@ -1,0 +1,13 @@
+.anchorPane {
+    -fx-background-image: url("../assets/Menus/LoginAndProfileMenu.png");
+    -fx-background-size: cover;
+}
+.button {
+    -fx-pref-width: 500;
+    -fx-pref-height: 60;
+    -fx-border-radius: 15;
+    -fx-text-fill: #f1e3e3;
+    -fx-background-color: #040531;
+    -fx-font-size: 18;
+    -fx-font-family: "Bodoni MT Black";
+}
