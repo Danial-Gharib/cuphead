@@ -2,3 +2,26 @@
     -fx-background-image: url("../assets/Menus/LoginAndProfileMenu.png");
     -fx-background-size: cover;
 }
+.button {
+    -fx-pref-width: 500;
+    -fx-pref-height: 60;
+    -fx-border-radius: 15;
+    -fx-text-fill: #f1e3e3;
+    -fx-background-color: #040531;
+    -fx-font-size: 18;
+    -fx-font-family: "Bodoni MT Black";
+}
+.table-view {
+    -fx-background-color: #d70000;
+    -fx-text-alignment: center;
+    -fx-font-size: 25;
+    -fx-color-label-visible: #0064fc;
+}
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: #12088c ;
+}

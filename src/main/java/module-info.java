@@ -9,6 +9,6 @@ module sample.cuphead {
     requires com.google.gson;
     opens sample.cuphead to javafx.fxml;
     opens sample.cuphead.view to javafx.fxml, javafx.graphics;
-    opens sample.cuphead.model to com.google.gson;
+    opens sample.cuphead.model to com.google.gson , javafx.base;
     exports sample.cuphead;
 }
