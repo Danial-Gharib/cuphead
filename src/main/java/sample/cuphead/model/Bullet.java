@@ -4,16 +4,29 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
+import sample.cuphead.transition.BulletAnimation;
 
 import java.util.ArrayList;
 
 public class Bullet extends Rectangle {
     private static ArrayList<Bullet> bullets = new ArrayList<>();
     private AnchorPane anchorPane;
+    private BulletAnimation bulletAnimation;
+
+    public BulletAnimation getBulletAnimation() {
+        return bulletAnimation;
+    }
+
+    public void setBulletAnimation(BulletAnimation bulletAnimation) {
+        this.bulletAnimation = bulletAnimation;
+    }
+
     public Bullet(double x , double y , AnchorPane anchorPane) {
         super(x , y , 45 , 30);
         this.anchorPane = anchorPane;
         bullets.add(this);
+        bulletAnimation = new BulletAnimation(this);
+        bulletAnimation.play();
     }
 
     public static ArrayList<Bullet> getBullets() {

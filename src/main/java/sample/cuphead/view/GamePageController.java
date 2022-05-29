@@ -16,6 +16,7 @@ import sample.cuphead.App;
 import sample.cuphead.controller.PlaneMovement;
 import sample.cuphead.controller.UserController;
 import sample.cuphead.enumeraion.PlaneMovementFrames;
+import sample.cuphead.model.Boss;
 import sample.cuphead.model.Bullet;
 import sample.cuphead.model.User;
 import sample.cuphead.transition.BulletAnimation;
@@ -40,6 +41,7 @@ public class GamePageController {
         plane.setImage(new Image(App.class.getResource(PlaneMovementFrames.MOVE.getAddress() +  "0.png").toString()));
         PlaneAnimation planeAnimation = new PlaneAnimation(plane);
         planeAnimation.play();
+        Boss boss = Boss.getInstance(pane);
         initializeSoundEffects();
         Platform.runLater(new Runnable() {
             @Override
@@ -93,8 +95,6 @@ public class GamePageController {
         Bullet bullet = new Bullet(plane.getLayoutX() + 95 , plane.getLayoutY() + 40 , pane);
         pane.getChildren().add(bullet);
         bullet.setVisible(true);
-        BulletAnimation bulletAnimation = new BulletAnimation(bullet);
-        bulletAnimation.play();
         audioClip.play();
     }
 }
