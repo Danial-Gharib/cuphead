@@ -22,7 +22,7 @@ public class Bullet extends Rectangle {
     }
 
     public Bullet(double x , double y , AnchorPane anchorPane) {
-        super(x , y , 45 , 30);
+        super(x , y , 100 , 30);
         this.anchorPane = anchorPane;
         bullets.add(this);
         bulletAnimation = new BulletAnimation(this);
@@ -37,4 +37,7 @@ public class Bullet extends Rectangle {
         this.setFill(new ImagePattern(new Image(getClass().getResource(url).toExternalForm())));
     }
 
+    public AnchorPane getAnchorPane() {
+        return anchorPane;
+    }
 }

@@ -8,7 +8,7 @@ public class BossAnimation extends Transition {
     private Boss boss;
     public BossAnimation(Boss boss) {
         this.boss = boss;
-        this.setCycleDuration(Duration.millis(750));
+        this.setCycleDuration(Duration.millis(500));
         this.setCycleCount(-1);
     }
     @Override

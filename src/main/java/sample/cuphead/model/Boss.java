@@ -44,4 +44,7 @@ public class Boss extends Rectangle {
     public void setBackground(String url) {
         this.setFill(new ImagePattern(new Image(getClass().getResource(url).toExternalForm())));
     }
+    public boolean hasCollision(Rectangle bullet) {
+        return bullet.getBoundsInParent().intersects(this.getLayoutBounds());
+    }
 }

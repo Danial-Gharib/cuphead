@@ -9,11 +9,21 @@ public class Game {
     private int health;
     private int damage;
     private int shootPower;
+    private int score;
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
 
     public Game() {
         this.health = 5;
         this.damage = 2;
         this.shootPower = 2;
+        this.score = 0;
     }
 
     public int getHealth() {
