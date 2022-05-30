@@ -27,6 +27,7 @@ public class Bullet extends Rectangle {
         bullets.add(this);
         bulletAnimation = new BulletAnimation(this);
         bulletAnimation.play();
+        this.anchorPane.getChildren().add(this);
     }
 
     public static ArrayList<Bullet> getBullets() {

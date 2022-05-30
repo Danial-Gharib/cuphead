@@ -46,7 +46,7 @@ public class User implements Comparable<User>{
 
     @Override
     public int compareTo(User o) {
-        if (this.getScore() != o.getScore()) return this.getScore() - o.getScore();
+        if (this.getScore() != o.getScore()) return o.getScore() - this.getScore();
         return this.getUsername().compareTo(o.getUsername());
     }
 }

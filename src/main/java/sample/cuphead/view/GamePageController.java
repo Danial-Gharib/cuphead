@@ -2,6 +2,7 @@ package sample.cuphead.view;
 
 import javafx.application.Platform;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -13,6 +14,7 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
 import sample.cuphead.App;
 import sample.cuphead.controller.GameController;
+import sample.cuphead.controller.MiniBossCreation;
 import sample.cuphead.controller.PlaneMovement;
 import sample.cuphead.controller.UserController;
 import sample.cuphead.enumeraion.PlaneMovementFrames;
@@ -22,7 +24,6 @@ import sample.cuphead.model.Game;
 import sample.cuphead.model.User;
 import sample.cuphead.transition.PlaneAnimation;
 import sample.cuphead.transition.Timer;
-
 public class GamePageController {
     public ImageView avatar;
     public Label username;
@@ -55,7 +56,9 @@ public class GamePageController {
         Thread gameLogic = new Thread(new GameController(plane , score , cupHeadHp , enemyHp  , pane));
         gameLogic.setDaemon(true);
         gameLogic.start();
-
+        Thread minibosses = new Thread(new MiniBossCreation(pane , System.currentTimeMillis()));
+        minibosses.setDaemon(true);
+        minibosses.start();
     }
 
     private void initializeSoundEffects() {
@@ -78,7 +81,6 @@ public class GamePageController {
         Timer myTimer = new Timer(timer);
         myTimer.play();
     }
-
     public void movement(KeyEvent keyEvent) {
         switch (keyEvent.getCode()) {
             case W: {
@@ -106,7 +108,6 @@ public class GamePageController {
 
     private void fire() {
         Bullet bullet = new Bullet(plane.getLayoutX() + 95 , plane.getLayoutY() + 40 , pane);
-        pane.getChildren().add(bullet);
         bullet.setVisible(true);
         audioClip.play();
     }
